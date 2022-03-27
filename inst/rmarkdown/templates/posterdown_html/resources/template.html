@@ -255,9 +255,17 @@ color: $if(author_textcol)$$author_textcol$$else$$if(secondary_colour)$$secondar
 font-size: $if(email_textsize)$$email_textsize$$else$50pt$endif$;
 text-decoration: none;
 }
+a.envelope {
+color: $if(author_textcol)$$author_textcol$$else$$if(secondary_colour)$$secondary_colour$$else$#ffffff$endif$$endif$;
+text-decoration: none;
+}
 .twitter, i {
 color: $if(author_textcol)$$author_textcol$$else$$if(secondary_colour)$$secondary_colour$$else$#ffffff$endif$$endif$;
 font-size: $if(twitter_textsize)$$twitter_textsize$$else$50pt$endif$;
+text-decoration: none;
+}
+a.twitter {
+color: $if(author_textcol)$$author_textcol$$else$$if(secondary_colour)$$secondary_colour$$else$#ffffff$endif$$endif$;
 text-decoration: none;
 }
 .caption {
