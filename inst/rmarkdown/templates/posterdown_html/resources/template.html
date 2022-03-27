@@ -288,13 +288,13 @@ border-radius: 2mm;
 font-size: 1em;
 }
 table {
-font-size: 40px;
+font-size: $if(body_textsize)$$body_textsize$$else$45px$endif$;
 margin: auto;
 border-top: 3px solid #666;
 border-bottom: 3px solid #666;
 }
 table thead th {
-border-bottom: 3px solid #ddd;
+border-bottom: 3px solid #666;
 }
 td {
 padding: 8px;
