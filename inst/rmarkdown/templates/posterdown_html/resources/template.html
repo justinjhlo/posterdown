@@ -251,12 +251,12 @@ line-height: 1;
 border-radius: 2mm;
 }
 .envelope {
-color: $if(affiliation_textcol)$$affiliation_textcol$$else$#00000060$endif$;
+color: $if(author_textcol)$$author_textcol$$else$$if(secondary_colour)$$secondary_colour$$else$#ffffff$endif$$endif$;
 font-size: $if(email_textsize)$$email_textsize$$else$50pt$endif$;
 text-decoration: none;
 }
 .twitter, i {
-color: $if(affiliation_textcol)$$affiliation_textcol$$else$#00000060$endif$;
+color: $if(author_textcol)$$author_textcol$$else$$if(secondary_colour)$$secondary_colour$$else$#ffffff$endif$$endif$;
 font-size: $if(twitter_textsize)$$twitter_textsize$$else$50pt$endif$;
 text-decoration: none;
 }
@@ -342,12 +342,12 @@ $endif$
 $if(title)$<h1 id="title">$title$</h1>$endif$
 $if(author)$
 $for(author)$
-<h3 id="author">
+<h3>
   $author.name$
   $if(author.email)$ <a class="envelope"><i class="fas fa-envelope"></i>$author.email$</a>$endif$
   $if(author.twitter)$ <i class="fab fa-twitter"></i> <a class="twitter" href="https://twitter.com/$author.twitter$">@$author.twitter$</a>$endif$
 </h3>
-$if(author.affil)$<h5 id="affiliation">$author.affil$</h5>$endif$
+$if(author.affil)$<h5>$author.affil$</h5>$endif$
 $sep$<br> $endfor$
 $endif$
 </div>
