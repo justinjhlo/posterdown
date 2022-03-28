@@ -152,7 +152,8 @@ background-color: $if(body_bgcol)$$body_bgcol$$else$#ffffff$endif$;
 }
 .poster_title h1 {
 font-size: $if(title_textsize)$$title_textsize$$else$75pt$endif$;
-margin: 0;
+margin-top: 6px;
+margin-bottom: 6px;
 border: 0;
 font-weight: normal;
 }
@@ -353,7 +354,7 @@ $for(author)$
 <h3>
   $author.name$
   $if(author.email)$&ensp;<i class="fas fa-envelope"></i> <a class="envelope">$author.email$</a>$endif$
-  $if(author.twitter)$&ensp;<i class="fab fa-twitter"></i> <a class="twitter" href="https://twitter.com/$author.twitter$">@$author.twitter$</a>$endif$
+  $if(author.twitter)$&ensp;<i class="fab fa-twitter"></i> <a class="twitter" href="https://twitter.com/$author.twitter$">$author.twitter$</a>$endif$
 </h3>
 $if(author.affil)$<h5>$author.affil$</h5>$endif$
 $sep$<br> $endfor$
